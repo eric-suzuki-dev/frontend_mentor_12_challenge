@@ -26,6 +26,15 @@ body {
     font-size: var(--font-size);
     font-weight: var(--font-regular);
     font-family: var(--font-principal);
+
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -33,10 +42,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.text, .price, .credit{
+.text,
+.price,
+.credit {
     box-shadow: 5px 5px 30px var(--grayish-blue);
 }
 
@@ -164,4 +174,55 @@ h4 {
 
 .attribution a {
     color: hsl(var(--color-attribution));
+}
+
+/* ------ Responsivo ------ */
+@media only screen and (min-width: 650px) {
+    .container {
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        height: 480px;
+        width: 640px;
+    }
+
+    .text {
+        height: 130px;
+        width: 550px;
+        padding: 40px 45px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .text h1 {
+        font-size: 23px;
+    }
+
+    .text h2 {
+        font-size: 18px;
+    }
+
+    .text p {
+        margin-top: 14px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .price {
+        height: 180px;
+        width: 240px;
+        padding: 40px 40px;
+        border-radius: 0 0 0 5px;
+    }
+
+    .price button {
+        width: 240px;
+    }
+
+    .credit {
+        height: 180px;
+        width: 240px;
+        padding: 40px 40px;
+        border-radius: 0 0 5px 0;
+    }
+
 }
